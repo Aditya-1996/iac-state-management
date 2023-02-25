@@ -1,4 +1,4 @@
-                                            # Improving State Management in IaC
+# Improving State Management in IaC
 
 IAC-state-management project attempts to find ways to improve state management in Infrastrcuture as a Code applications. In this case, we specifically examine Terraform's state management system, and see how I can attempt to improve the various issues with state management in IaC.
 
