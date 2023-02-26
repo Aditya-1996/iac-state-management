@@ -16,15 +16,6 @@ provider "aws" {
 
 
 resource "aws_s3_bucket" "newbucket" {
-    bucket =  "${var.new_bucket_name}"
+    bucket =  "testbucket"
 }
 
-resource "aws_s3_bucket" "newbucket2" {
-    bucket =  "${var.new_bucket2_name}"
-}
-
-resource "aws_s3_bucket_object" "bucket2object" {
-    bucket =  aws_s3_bucket.newbucket2.id
-    key = "Adi_Resume.pdf"
-    source = "Adi_Resume.pdf"
-}
