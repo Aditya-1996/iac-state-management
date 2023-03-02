@@ -21,7 +21,31 @@ resource "aws_s3_bucket" "newbucket" {
 
 resource "aws_s3_bucket" "newbucket2" {
     bucket =  "${var.new_bucket2_name}"
+    acl = "public-read"
 }
+
+/*
+resource "aws_s3_bucket_policy" "example_bucket_policy" {
+  bucket = aws_s3_bucket.example_bucket.id
+
+  policy = jsonencode({
+    Version = "2023-02-07"
+    Statement = [
+      {
+        Effect = "Allow"
+        Principal = "*"
+        Action = [
+          "s3:GetObject",
+          "s3:PutObject"
+        ]
+        Resource = [
+          "${aws_s3_bucket.example_bucket.arn}/*"
+        ]
+      }
+    ]
+  })
+}
+*/
 
 resource "aws_s3_bucket_object" "bucket2object" {
     bucket =  aws_s3_bucket.newbucket2.id
@@ -39,3 +63,6 @@ resource "aws_s3_bucket_object_lock_configuration" "resumelock" {
     }
   }
 }
+
+
+
