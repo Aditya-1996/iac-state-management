@@ -49,10 +49,10 @@ def lambda_handler(event, context):
         new_aws_s3_object_resource_with_name = {
             "mode": "managed",
             "type": "aws_s3_bucket_object",
-            "name": event['Records'][0]['s3']['object']['key'],
+            "name": event['detail']['object']['key'],
             "values": {
-                "bucket": event['Records'][0]['s3']['bucket']['name'],
-                "key": event['Records'][0]['s3']['object']['key'],
+                "bucket": event['detail']['bucket']['name'],
+                "key": event['detail']['object']['key'],
             }
         }
 
