@@ -1,5 +1,5 @@
 '''
-File name: s3_bucket_creation_file_write_to_s3.py
+File name: s3_object_file_write_to_s3.py
 Author: adravish@ucsc.edu
 Python Version: 3.9.10
 
@@ -36,7 +36,7 @@ def lambda_handler(event, context):
 
     # Check if the new aws_s3_bucket_object resource already exists in the state file 
     for resource in cur_state_json['resources']:
-        if resource['type'] == 'aws_s3_bucket' and resource['name'] == event['detail']['requestParameters']['bucketName']:
+        if resource['type'] == 'aws_s3_bucket_object' and resource['name'] == event['detail']['requestParameters']['key']:
             resource_exists = True
             break
 
@@ -47,10 +47,11 @@ def lambda_handler(event, context):
         #create new json with the object resource
         new_aws_s3_object_resource_with_name = {
             "mode": "managed",
-            "type": "aws_s3_bucket",
-            "name": event['detail']['requestParameters']['bucketName'],
+            "type": "aws_s3_bucket_object",
+            "name": event['detail']['requestParameters']['key'],
             "values": {
-                "bucket": event['detail']['requestParameters']['bucketName']
+                "bucket": event['detail']['requestParameters']['bucketName'],
+                "key": event['detail']['requestParameters']['key'],
             }
         }
 

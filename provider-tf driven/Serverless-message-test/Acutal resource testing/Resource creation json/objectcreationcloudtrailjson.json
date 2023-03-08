@@ -1,0 +1,123 @@
+{
+	"Records": [{
+		"eventVersion": "1.08",
+		"userIdentity": {
+			"type": "Root",
+			"principalId": "892637115140",
+			"arn": "arn:aws:iam::892637115140:root",
+			"accountId": "892637115140",
+			"accessKeyId": "ASIA47VKROMCIII6UC2C",
+			"sessionContext": {
+				"attributes": {
+					"creationDate": "2023-03-08T05:59:27Z",
+					"mfaAuthenticated": "false"
+				}
+			}
+		},
+		"eventTime": "2023-03-08T16:49:33Z",
+		"eventSource": "s3.amazonaws.com",
+		"eventName": "DeleteObjects",
+		"awsRegion": "us-east-1",
+		"sourceIPAddress": "71.198.91.112",
+		"userAgent": "[S3Console/0.4, aws-internal/3 aws-sdk-java/1.11.1030 Linux/5.4.231-145.341.amzn2int.x86_64 OpenJDK_64-Bit_Server_VM/25.352-b08 java/1.8.0_352 vendor/Oracle_Corporation cfg/retry-mode/standard]",
+		"requestParameters": {
+			"bucketName": "newbucketvirginiacloudtrailpickuptest5",
+			"Host": "s3.amazonaws.com",
+			"delete": ""
+		},
+		"responseElements": null,
+		"additionalEventData": {
+			"SignatureVersion": "SigV4",
+			"CipherSuite": "ECDHE-RSA-AES128-GCM-SHA256",
+			"bytesTransferredIn": 0,
+			"AuthenticationMethod": "AuthHeader",
+			"x-amz-id-2": "K7crK8o0V8HKyLYNe0UBuN2DpNFkuMJG80F4hIwK7+9iKylA9bzQmgmYDKnln5KdS8GAf+4rIj4=",
+			"bytesTransferredOut": 0
+		},
+		"requestID": "9TT007T9J2MFBS7G",
+		"eventID": "580f6d07-e534-408d-8cd8-3d03ce2f4498",
+		"readOnly": false,
+		"resources": [{
+			"type": "AWS::S3::Object",
+			"ARNPrefix": "arn:aws:s3:::newbucketvirginiacloudtrailpickuptest5/"
+		}, {
+			"accountId": "892637115140",
+			"type": "AWS::S3::Bucket",
+			"ARN": "arn:aws:s3:::newbucketvirginiacloudtrailpickuptest5"
+		}],
+		"eventType": "AwsApiCall",
+		"managementEvent": false,
+		"recipientAccountId": "892637115140",
+		"vpcEndpointId": "vpce-f40dc59d",
+		"eventCategory": "Data",
+		"tlsDetails": {
+			"tlsVersion": "TLSv1.2",
+			"cipherSuite": "ECDHE-RSA-AES128-GCM-SHA256",
+			"clientProvidedHostHeader": "s3.amazonaws.com"
+		}
+	}, {
+		"eventVersion": "1.08",
+		"userIdentity": {
+			"type": "Root",
+			"principalId": "892637115140",
+			"arn": "arn:aws:iam::892637115140:root",
+			"accountId": "892637115140",
+			"accessKeyId": "ASIA47VKROMCAIGCE3YA",
+			"sessionContext": {
+				"attributes": {
+					"creationDate": "2023-03-08T05:59:27Z",
+					"mfaAuthenticated": "false"
+				}
+			}
+		},
+		"eventTime": "2023-03-08T16:50:06Z",
+		"eventSource": "s3.amazonaws.com",
+		"eventName": "PutObject",
+		"awsRegion": "us-east-1",
+		"sourceIPAddress": "71.198.91.112",
+		"userAgent": "[Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0]",
+		"requestParameters": {
+			"X-Amz-Date": "20230308T165005Z",
+			"bucketName": "newbucketvirginiacloudtrailpickuptest5",
+			"X-Amz-Algorithm": "AWS4-HMAC-SHA256",
+			"x-amz-acl": "bucket-owner-full-control",
+			"X-Amz-SignedHeaders": "content-md5;content-type;host;x-amz-acl;x-amz-storage-class",
+			"Host": "newbucketvirginiacloudtrailpickuptest5.s3.us-east-1.amazonaws.com",
+			"X-Amz-Expires": "300",
+			"key": "Adi_Resume.pdf",
+			"x-amz-storage-class": "STANDARD"
+		},
+		"responseElements": {
+			"x-amz-server-side-encryption": "AES256"
+		},
+		"additionalEventData": {
+			"SignatureVersion": "SigV4",
+			"CipherSuite": "ECDHE-RSA-AES128-GCM-SHA256",
+			"bytesTransferredIn": 25601,
+			"SSEApplied": "Default_SSE_S3",
+			"AuthenticationMethod": "QueryString",
+			"x-amz-id-2": "kr4vtzblOeOu3dVdCQttPBqFz2Ph1MZpvAf2Bk5mvGjYhpj6j0AxQoMGfWdaSTiHUf3NCoeVi7c=",
+			"bytesTransferredOut": 0
+		},
+		"requestID": "RWF73G9EA6PZMC3V",
+		"eventID": "28c861fb-7a75-4387-ac27-cb53203ff15a",
+		"readOnly": false,
+		"resources": [{
+			"type": "AWS::S3::Object",
+			"ARN": "arn:aws:s3:::newbucketvirginiacloudtrailpickuptest5/Adi_Resume.pdf"
+		}, {
+			"accountId": "892637115140",
+			"type": "AWS::S3::Bucket",
+			"ARN": "arn:aws:s3:::newbucketvirginiacloudtrailpickuptest5"
+		}],
+		"eventType": "AwsApiCall",
+		"managementEvent": false,
+		"recipientAccountId": "892637115140",
+		"eventCategory": "Data",
+		"tlsDetails": {
+			"tlsVersion": "TLSv1.2",
+			"cipherSuite": "ECDHE-RSA-AES128-GCM-SHA256",
+			"clientProvidedHostHeader": "newbucketvirginiacloudtrailpickuptest5.s3.us-east-1.amazonaws.com"
+		}
+	}]
+}

@@ -1,0 +1,51 @@
+{
+    "eventVersion": "1.08",
+    "userIdentity": {
+        "type": "Root",
+        "principalId": "892637115140",
+        "arn": "arn:aws:iam::892637115140:root",
+        "accountId": "892637115140",
+        "accessKeyId": "ASIA47VKROMCBIXRSJLR",
+        "sessionContext": {
+            "sessionIssuer": {},
+            "webIdFederationData": {},
+            "attributes": {
+                "creationDate": "2023-03-07T15:14:19Z",
+                "mfaAuthenticated": "false"
+            }
+        }
+    },
+    "eventTime": "2023-03-08T02:44:38Z",
+    "eventSource": "s3.amazonaws.com",
+    "eventName": "CreateBucket",
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "71.198.91.112",
+    "userAgent": "[S3Console/0.4, aws-internal/3 aws-sdk-java/1.11.1030 Linux/5.10.165-126.735.amzn2int.x86_64 OpenJDK_64-Bit_Server_VM/25.352-b08 java/1.8.0_352 vendor/Oracle_Corporation cfg/retry-mode/standard]",
+    "requestParameters": {
+        "bucketName": "newbucketvirginiacloudtrailpickuptest5",
+        "Host": "s3.amazonaws.com",
+        "x-amz-object-ownership": "BucketOwnerEnforced"
+    },
+    "responseElements": null,
+    "additionalEventData": {
+        "SignatureVersion": "SigV4",
+        "CipherSuite": "ECDHE-RSA-AES128-GCM-SHA256",
+        "bytesTransferredIn": 0,
+        "AuthenticationMethod": "AuthHeader",
+        "x-amz-id-2": "SRGj1bS+g94fKk4hkJNtQX4JzCmJi2GMeQ/hJ+lXMkDufbS3PGHd3DlWgVjzMi4lgVM+XRqAD1I=",
+        "bytesTransferredOut": 0
+    },
+    "requestID": "EY5M38C4Q3N3C9CX",
+    "eventID": "5cf0c796-c7f9-47f7-b057-6eb7fa909339",
+    "readOnly": false,
+    "eventType": "AwsApiCall",
+    "managementEvent": true,
+    "recipientAccountId": "892637115140",
+    "vpcEndpointId": "vpce-f40dc59d",
+    "eventCategory": "Management",
+    "tlsDetails": {
+        "tlsVersion": "TLSv1.2",
+        "cipherSuite": "ECDHE-RSA-AES128-GCM-SHA256",
+        "clientProvidedHostHeader": "s3.amazonaws.com"
+    }
+}
