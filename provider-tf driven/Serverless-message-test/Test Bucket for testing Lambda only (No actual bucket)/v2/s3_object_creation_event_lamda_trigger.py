@@ -3,15 +3,14 @@ File name: s3_object_creation_event_lamda_trigger.py
 Author: adravish@ucsc.edu
 Python Version: 3.9.10
 
-Description: This python file captures an S3 bucket creation event and writes the details about the creation to an S3 file - which is a Terraform State file
+Description: This python file captures an test S3 object creation (not actual) event and writes the details about the creation to an S3 file - which is a Terraform State file
 
 Functions:
 - lambda_handler(): loads an event and writes to the Terraform state file within S3
 
 Imported Library/Modules:
 - boto3: AWS specific library that is used to interact with AWS services. Here, we are using it to capture a bucket creation event
-- json: Used to handle json inputs/outputs formatting
-- os 
+- json: Used to handle json inputs/outputs formatting 
 '''
 
 import json

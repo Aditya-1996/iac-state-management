@@ -1,9 +1,9 @@
 '''
-File name: s3_object_creation_event_lamda_trigger.py
+File name: s3_bucket_creation_file_write_to_s3.py
 Author: adravish@ucsc.edu
 Python Version: 3.9.10
 
-Description: This python file captures an S3 object creation event and writes the details about the creation to an S3 file - which is a Terraform State file
+Description: This python file captures an S3 bucket creation event and writes the details about the creation to an S3 file - which is a Terraform State file
 
 Functions:
 - lambda_handler(): loads an event and writes to the Terraform state file within S3
@@ -36,7 +36,7 @@ def lambda_handler(event, context):
 
     # Check if the new aws_s3_bucket_object resource already exists in the state file 
     for resource in cur_state_json['resources']:
-        if resource['type'] == 'aws_s3_bucket_object' and resource['name'] == event['Records'][0]['s3']['object']['key']:
+        if resource['type'] == 'aws_s3_bucket' and resource['name'] == event['detail']['requestParameters']['bucketName']:
             resource_exists = True
             break
 
@@ -47,11 +47,11 @@ def lambda_handler(event, context):
         #create new json with the object resource
         new_aws_s3_object_resource_with_name = {
             "mode": "managed",
-            "type": "aws_s3_bucket_object",
-            "name": event['detail']['object']['key'],
+            "type": "aws_s3_bucket",
+            "name": event['detail']['requestParameters']['bucketName'],
             "values": {
-                "bucket": event['detail']['bucket']['name'],
-                "key": event['detail']['object']['key'],
+                "bucket": event['detail']['requestParameters']['bucketName'],
+                #"key": event['detail']['object']['key'],
             }
         }
 
@@ -69,5 +69,5 @@ def lambda_handler(event, context):
     '''
     return {
         'statusCode': 200,
-        'body': json.dumps('Terraform state file updated successfully with new object')
+        'body': json.dumps('Terraform state file updated successfully with new bucket')
     }
